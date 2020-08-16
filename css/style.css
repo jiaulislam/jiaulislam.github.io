@@ -1,0 +1,50 @@
+html { 
+    height: 100%; 
+} 
+
+body{
+    background-image: url(/src/undraw_screen_time_vkev.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+#timer{
+    font-family: Ubuntu;
+    font-size: 60px;
+    color: rgb(10, 177, 107);
+    position: relative;
+}
+
+button{
+    font-family: Ubuntu;
+    font-weight: 500;
+    border-radius: 3mm;
+    font-size: 1rem;
+    transition-duration: 0.10;
+    text-decoration: none;
+    height: 2rem;
+    width: 7rem;
+    position: relative;
+}
+.btn{
+    width: 5rem;
+    background-blend-mode: soft-light;
+}
+.btn:hover{
+    width: 6rem;
+    transition: width 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+button:focus{
+    outline: none;
+}
+#myText {
+    font-family: Lobster;
+    color: #f5e508;
+    font-size: 6rem;
+    padding-bottom: 65px;
+}
