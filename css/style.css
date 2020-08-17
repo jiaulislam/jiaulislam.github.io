@@ -75,3 +75,7 @@ button:focus{
     font-family: 'Fredoka One', cursive;
     font-size: 15px;
 }
+
+textarea{
+    resize: none;
+}
