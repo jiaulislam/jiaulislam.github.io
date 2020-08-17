@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css"<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
     <link rel="stylesheet" href="css/style.css"<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Modak">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -19,10 +20,19 @@
             <h1 id="myText" class="header-text">BMC Remedey String Generator</h1>
         </div>
         <div class="boxes-area">
-            <textarea id="w3review" name="w3review" rows="15" cols="50"></textarea>
-            <textarea id="format-output" rows="15" cols="50"></textarea>
-            <textarea id="query-output" rows="15" cols="50"></textarea>
-        </div> 
+            <div class="box" id="box1">
+                <p class="box-p-header">Data</p>
+                <textarea id="w3review" name="w3review" rows="15" cols="50" placeholder="Insert your text here..."></textarea>
+            </div>
+            <div class="box" id="box2">
+                <p class="box-p-header">Impact List String</p>
+                <textarea id="format-output" rows="15" cols="50" class="box"></textarea>
+            </div>
+            <div class="box" id="box3">
+                <p class="box-p-header">Relationship Query String</p>
+                <textarea id="query-output" rows="15" cols="50" class="box"></textarea>
+            </div>
+        </div>
         <div class="button-container">
             <button id="submit" class="btn">Generate</button>
             <button id="clear-btn" class="btn">Clear</button>

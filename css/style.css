@@ -52,10 +52,26 @@ button:focus{
 }
 
 .nav-bar{
-    font-family: Ubuntu;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
 }
 
 .nav-elem{
-    padding-right: 13px;
+    padding-right: 1rem;
+}
+
+.boxes-area{
+    display: table;
+    border-spacing: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box{
+    display: table-cell;
+}
+
+.box-p-header{
+    font-family: 'Fredoka One', cursive;
+    font-size: 15px;
 }
