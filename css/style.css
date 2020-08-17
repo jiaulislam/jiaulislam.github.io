@@ -3,6 +3,8 @@ html {
 } 
 
 body{
+    background-color: gainsboro;
+    background-blend-mode: overlay;
     background-image: url(/src/undraw_screen_time_vkev.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -44,7 +46,16 @@ button:focus{
 }
 #myText {
     font-family: Lobster;
-    color: #f5e508;
-    font-size: 6rem;
+    color: #2F2E41;
+    font-size: 3rem;
     padding-bottom: 65px;
+}
+
+.nav-bar{
+    font-family: Ubuntu;
+    font-size: 1.5rem;
+}
+
+.nav-elem{
+    padding-right: 13px;
 }
