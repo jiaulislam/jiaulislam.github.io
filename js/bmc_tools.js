@@ -17,14 +17,15 @@ genButton.addEventListener('click', function(){
             pureSite.push(parseSites[i].trim());
         }
     }
-    // generate the relationship query string
-    generateQueryString(pureSite);
 
     // join each element with ',' in puresite elements and return a string
     formattedString = pureSite.join(",");
 
     // set the value with formattedstring in the output textarea
     impactBox.value = formattedString;
+
+    // generate the relationship query string
+    generateQueryString(pureSite);
 })
 
 function generateQueryString(siteArray){
@@ -35,7 +36,7 @@ function generateQueryString(siteArray){
         }
     }
     queryFormattedText = queryList.join("OR");
-    queryBox.value = queryList;
+    queryBox.value = queryFormattedText;
 }
 function clear(){
    sitecodes.value = "";
