@@ -4,28 +4,38 @@ let genButton = document.getElementById("submit");
 let queryBox = document.getElementById("query-output");
 let impactBox = document.getElementById("format-output")
 let clrButton = document.getElementById("clear-btn");
+let commaSites = document.getElementById("comma-sites");
 
 genButton.addEventListener('click', function(){
     // wait for the click event from user to generate the string
-    let formattedString;
-    let parseSites = sitecodes.value.split("\n");
-    let pureSite = [];
+    if (sitecodes.value){
+        let formattedString;
+        let parseSites = sitecodes.value.split("\n");
+        let pureSite = [];
 
-    // trim all the spaces around the site codes
-    for (let i = 0; i < parseSites.length; i++){
-        if (parseSites[i] != ""){
-            pureSite.push(parseSites[i].trim());
+        // trim all the spaces around the site codes
+        for (let i = 0; i < parseSites.length; i++){
+            if (parseSites[i] != ""){
+                pureSite.push(parseSites[i].trim());
+            }
+        }
+
+        // join each element with ',' in puresite elements and return a string
+        formattedString = pureSite.join(",");
+
+        // set the value with formattedstring in the output textarea
+        impactBox.value = formattedString;
+
+        // generate the relationship query string
+        generateQueryString(pureSite);
+
+    }
+    else{
+    // generate just the query relationship
+        if (document.getElementById("comma-sites").value){
+            commaSeparetedSites();
         }
     }
-
-    // join each element with ',' in puresite elements and return a string
-    formattedString = pureSite.join(",");
-
-    // set the value with formattedstring in the output textarea
-    impactBox.value = formattedString;
-
-    // generate the relationship query string
-    generateQueryString(pureSite);
 })
 
 function generateQueryString(siteArray){
@@ -35,13 +45,24 @@ function generateQueryString(siteArray){
             queryList.push("'Name'LIKE\"%" + siteArray[i] + "\"");
         }
     }
-    queryFormattedText = queryList.join("OR");
-    queryBox.value = queryFormattedText;
-}
+    queryBox.value = queryList.join("OR");
+   }
 function clear(){
-   sitecodes.value = "";
-   queryBox.value = "";
-   impactBox.value = "";
+    sitecodes.value = "";
+    queryBox.value = "";
+    impactBox.value = "";
+    commaSites.value = "";
+}
+
+function commaSeparetedSites(){
+    if (!document.getElementsByClassName("comma-sites").value){
+        let commaSites = document.getElementById("comma-sites").value.split(",");
+        let finalQuery = [];
+        for (let i = 0; i < commaSites.length; i++){
+            finalQuery.push("'Name'LIKE\"%" + commaSites[i] + "\"");
+        }
+        queryBox.value= finalQuery.join("OR");
+    }
 }
 
 clrButton.addEventListener('click', function(){
