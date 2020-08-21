@@ -59,7 +59,7 @@ function commaSeparetedSites(){
         let commaSites = document.getElementById("comma-sites").value.split(",");
         let finalQuery = [];
         for (let i = 0; i < commaSites.length; i++){
-            finalQuery.push("'Name'LIKE\"%" + commaSites[i] + "\"");
+            finalQuery.push("'Name'LIKE\"%" + commaSites[i].trim() + "\"");
         }
         queryBox.value= finalQuery.join("OR");
     }
