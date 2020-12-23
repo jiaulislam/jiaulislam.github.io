@@ -20,14 +20,4 @@ startBtn.addEventListener('click', function() {
 resetBtn.addEventListener('click', function() {
     watch.reset();
 });
-
-// change the color of the header text 
-myText.addEventListener('mouseover', function() {
-    document.getElementById('myText').style.color = '#ff6666';
-});
-
-myText.addEventListener('mouseleave', function() {
-    document.getElementById('myText').style.color = '#2F2E41';
-});
-
 // ends here 
