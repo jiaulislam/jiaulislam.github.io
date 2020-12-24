@@ -25,6 +25,9 @@ genButton.addEventListener('click', function(){
         impactBox.value = formattedString;
         // generate the relationship query string
         generateQueryString(pureSite);
+        if (isBlank()) {
+            clrButton.disabled = false;
+        }
     }
 })
 
@@ -41,6 +44,17 @@ function clear() {
     sitecodes.value = "";
     queryBox.value = "";
     impactBox.value = "";
+
+    if (!isBlank()) {
+        clrButton.disabled = false;
+    }
+}
+
+function isBlank() {
+    if (sitecodes.value != "" || ( queryBox.value == "" || impactBox.value == "")) {
+        return true;
+    }
+    return false;
 }
 
 function commaSeparetedSites(){
@@ -57,4 +71,16 @@ function commaSeparetedSites(){
 clrButton.addEventListener('click', function(){
     // Clear the text box's
     clear();
+    // set the clear button disabled
+    if (isBlank()){
+        clrButton.disabled = true;
+    }
 })
+
+
+// set the clear button disabled when the page loads.
+document.addEventListener('DOMContentLoaded', function () {
+    if (isBlank()){
+        clrButton.disabled = true;
+    }
+},false);
