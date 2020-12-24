@@ -11,7 +11,6 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
     <link rel="shortcut icon" href="#" />
-
 </head>
 
 <body>
@@ -24,16 +23,22 @@
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                 <div class="navbar-nav nav-pills nav-fill">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    <a class="nav-link" href="tools.html">Tools</a>
-                    <a class="nav-link" href="about.html">About Me</a>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tools.html">Tools</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Me</a>
+                    </li>
                 </div>
             </div>
         </div>
     </nav>
     <div class="text-center">
         <h1 class="display-1">Learning Javascript</h1>
-        <small class="h6 text-muted">
+        <small class="h6 text-muted mb-3">
             A basic stopwatch to use as a refference timer for answering MCQ
             questions.
         </small>
@@ -41,11 +46,11 @@
     <!-- The Timer Visual -->
     <div class="container">
         <div>
-            <h1 class="text-center" id="timer">00:00:00</h1>
+            <h1 class="text-center mb-3" id="timer">00:00:00</h1>
         </div>
         <!-- Button -->
         <!-- <div class="text-center"> -->
-        <div class="text-center">
+        <div class="text-center mb-3">
             <div class="container-fluid">
                 <div class="btn-group btn-group-lg col-6" role="group" aria-label="Basic example">
                     <button class="btn btn-success btn-xl" id="startBtn" type="button">
