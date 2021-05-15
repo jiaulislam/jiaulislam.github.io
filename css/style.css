@@ -1,126 +1,12 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap'); */
-
-/* html { 
-    height: 100%; 
-} 
-
-body{
-    background-color: gainsboro;
-    background-blend-mode: overlay;
-    background-image: url(/src/undraw_screen_time_vkev.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    background-size: cover;
-    background-position: center;
-}
-
-#timer{
-    font-family: Ubuntu;
-    font-size: 60px;
-    color: rgb(10, 177, 107);
-    position: relative;
-}
-
-button{
-    font-family: Montserrat;
-    font-weight: bold;
-    border-radius: 3mm;
-    font-size: 12px;
-    transition-duration: 0.10;
-    text-decoration: none;
-    height: 2rem;
-    width: 7rem;
-    position: relative;
-}
-.btn{
-    width: 5rem;
-    background-blend-mode: soft-light;
-}
-.btn:hover{
-    width: 6rem;
-    transition: width 0.5s;
-    transition-timing-function: ease-in-out;
-}
-
-
-#myText {
-    font-family: Montserrat;
-    color: #2F2E41;
-    font-size: 3rem;
-    padding-bottom: 65px;
-}
-
-.nav-bar{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
-}
-
-.nav-elem{
-    padding-right: 1rem;
-}
-
-.boxes-area{
-    display: table;
-    border-spacing: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.box{
-    display: table-cell;
-    margin: 2px;
-    border-left-style: solid;
-    border-right-style: solid;
-    border-bottom-style: solid;
-}
-
-.box-p-header{
-    font-family: Montserrat, sans-serif;
-    font-weight: bold;
-    font-style: italic;
-    margin: 0;
-    background-color: gainsboro;
-    font-size: 18px;
-    border-style: solid;
-}
-
-textarea{
-    resize: none;
-    outline: none;
-} */
-/* .btn:focus {
-  outline: none !important;
-} */
-/* .btn:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-} */
-.btn:focus, .btn:active:focus, .btn.active:focus{
-    outline:none !important;
-    box-shadow:none !important;
-}
-/* .btn:focus {
-    outline: none !important;
-    box-shadow: none !important;
-} */
-/* .btn:focus,.btn:active:focus,.btn.active:focus,
-.btn.focus,.btn:active.focus,.btn.active.focus {
-    outline: none;
-} */
-
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 .btn-xl {
     padding: 10px 22px !important;
     font-size: 18px !important;
     font-weight: bold;
-    /* font: bold !important; */
-    /* border-radius: 10px !important; */
 }
 
 #timer{
-    /* font-family: Ubuntu; */
     font-size: 7rem;
     font-weight: bold;
     color: rgb(10, 177, 107);
@@ -139,7 +25,7 @@ textarea{
 }
 
 textarea {
-    resize: none;
+    resize: none !important;
     outline: none !important;
 }
 
@@ -157,4 +43,8 @@ textarea:valid{
 .card-header {
     font-weight: bold;
     border-color: #4ac7a2;
+}
+
+#myText {
+    font-family: 'Merriweather', serif;
 }
