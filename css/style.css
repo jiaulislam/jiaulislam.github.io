@@ -48,3 +48,9 @@ textarea:valid{
 #myText {
     font-family: 'Merriweather', serif;
 }
+
+#copy-btn-1, #copy-btn-2 {
+    position: absolute;
+    top: 88%;
+    left: 85%;
+}

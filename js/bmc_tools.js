@@ -5,7 +5,9 @@ let queryBox = document.getElementById("query-output");
 let impactBox = document.getElementById("format-output")
 let clrButton = document.getElementById("clear-btn");
 let commaSites = document.getElementById("comma-sites");
-let box = document.getElementsByClassName("container")
+let box = document.getElementsByClassName("container");
+let copyBtn1 = document.querySelector("#copy-btn-1");
+let copyBtn2 = document.querySelector("#copy-btn-2");
 
 genButton.addEventListener('click', function(){
     // wait for the click event from user to generate the string
@@ -84,3 +86,26 @@ document.addEventListener('DOMContentLoaded', function () {
         clrButton.disabled = true;
     }
 },false);
+
+// Impact List Copy Event
+copyBtn1.addEventListener("click", (event) => {
+    impactBox.select();
+    document.execCommand("copy");
+    event.preventDefault();
+});
+
+// Query List Copy Event
+copyBtn2.addEventListener("click", (event) => {
+  queryBox.select();
+  document.execCommand("copy");
+  event.preventDefault();
+});
+
+// for activating tooltip with bootstrap
+let tooltipTriggerList = [].slice.call(
+  document.querySelectorAll('[data-bs-toggle="tooltip"]')
+);
+let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl);
+});
+
