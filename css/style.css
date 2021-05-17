@@ -103,3 +103,7 @@ textarea:valid{
 .btn-genrt:after{
   background: hsl(152, 86%, 46%) !important;
 }
+
+.btnn:disabled{
+  color: rgb(214, 212, 212);
+}
