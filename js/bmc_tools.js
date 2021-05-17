@@ -82,9 +82,8 @@ clrButton.addEventListener('click', function(){
 
 // set the clear button disabled when the page loads.
 document.addEventListener('DOMContentLoaded', function () {
-    if (isBlank()){
-        clrButton.disabled = true;
-    }
+    sitecodes.focus()
+    sitecodes.select()
 },false);
 
 // Impact List Copy Event
