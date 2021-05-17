@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 .btn-xl {
     padding: 10px 22px !important;
     font-size: 18px !important;
@@ -46,7 +46,7 @@ textarea:valid{
 }
 
 #myText {
-    font-family: 'Merriweather', serif;
+    font-family: 'Bangers', cursive;
 }
 
 #copy-btn-1, #copy-btn-2 {
