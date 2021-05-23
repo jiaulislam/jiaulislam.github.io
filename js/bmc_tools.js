@@ -9,29 +9,8 @@ let box = document.getElementsByClassName("container");
 let copyBtn1 = document.querySelector("#copy-btn-1");
 let copyBtn2 = document.querySelector("#copy-btn-2");
 
-genButton.addEventListener('click', function(){
-    // wait for the click event from user to generate the string
-    if (sitecodes.value){
-        let formattedString;
-        let parseSites = sitecodes.value.split("\n");
-        let pureSite = [];
-        // trim all the spaces around the site codes
-        for (let i = 0; i < parseSites.length; i++){
-            if (parseSites[i] != ""){
-                pureSite.push(parseSites[i].trim());
-            }
-        }
-        // join each element with ',' in puresite elements and return a string
-        formattedString = pureSite.join(",");
-        // set the value with formattedstring in the output textarea
-        impactBox.value = formattedString;
-        // generate the relationship query string
-        generateQueryString(pureSite);
-        if (isBlank()) {
-            clrButton.disabled = false;
-        }
-    }
-})
+const REGEX = /([A-Z])\w+/gm;
+
 
 function generateQueryString(siteArray){
     let queryList = [];
@@ -40,8 +19,13 @@ function generateQueryString(siteArray){
             queryList.push("'Name'LIKE\"%" + siteArray[i] + "\"");
         }
     }
-    queryBox.value = queryList.join("OR");
-   }
+   return queryList.join("OR");
+}
+
+function generateCommaSeperatedString(siteArray){
+    return siteArray.join(",");
+}
+
 function clear() {
     sitecodes.value = "";
     queryBox.value = "";
@@ -59,16 +43,21 @@ function isBlank() {
     return false;
 }
 
-function commaSeparetedSites(){
-    if (!document.getElementsByClassName("comma-sites").value){
-        let commaSites = document.getElementById("comma-sites").value.split(",");
-        let finalQuery = [];
-        for (let i = 0; i < commaSites.length; i++){
-            finalQuery.push("'Name'LIKE\"%" + commaSites[i].trim() + "\"");
-        }
-        queryBox.value = finalQuery.join("OR");
+genButton.addEventListener("click", (event) => {
+  // wait for the click event from user to generate the string
+  if (sitecodes.value) {
+    let parseSites = sitecodes.value.match(REGEX);
+
+    // set the value with formattedstring in the output textarea
+    impactBox.value = generateCommaSeperatedString(parseSites);
+    // generate the relationship query string
+    queryBox.value = generateQueryString(parseSites);
+    if (isBlank()) {
+      clrButton.disabled = false;
     }
-}
+  }
+  event.preventDefault();
+});
 
 clrButton.addEventListener('click', function(){
     // Clear the text box's
