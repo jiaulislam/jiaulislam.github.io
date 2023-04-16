@@ -1,3 +1,5 @@
+[![Deploy Astro site to Pages](https://github.com/jiaulislam/jiaulislam.github.io/actions/workflows/astro.yml/badge.svg?branch=master)](https://github.com/jiaulislam/jiaulislam.github.io/actions/workflows/astro.yml)
+
 # Astro Modern Personal Website
 
 ![Astro Modern Personal Website](public/social_img.png)
