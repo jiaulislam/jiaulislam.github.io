@@ -1,3 +1,9 @@
 .time-line-container>div:last-child .education__time>.education__line {
     display: none;
 }
+.designation {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    perspective: 1000px; /* adjust the value as needed */
+  }
+  

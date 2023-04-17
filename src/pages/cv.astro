@@ -5,10 +5,10 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
 <BaseLayout title = "Resume">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
+    <div class="text-3xl w-full font-bold profile-title">Profile</div>
   </div>
 
-  <div class="mb-10 text-justify">
+  <div class="mb-10 text-justify profile-summary">
     B.Sc in Computer & Science with 3.5 years + of experience in software development. Dominion of various programming
     languages, frameworks, CMS. Experience in WEB design and development. Work with Data Base handled
     systems, as well as design, normalization and migration. Knowledge of work with graphic design tools for image
@@ -16,7 +16,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Education</div>
+    <div class="text-3xl w-full font-bold education-title">Education</div>
   </div>
 
   <div class="time-line-container grid gap-4 mb-10">
@@ -35,7 +35,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experience</div>
+    <div class="text-3xl w-full font-bold experience-title">Experience</div>
   </div>
 
   <div class="time-line-container mb-10">
@@ -61,7 +61,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certifications</div>
+    <div class="text-3xl w-full font-bold certifications-title">Certifications</div>
   </div>
 
   <ul class="list-disc mx-6 mb-10 grid gap-2">
@@ -80,7 +80,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </ul>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Skills</div>
+    <div class="text-3xl w-full font-bold skills-title">Skills</div>
   </div>
 
   <ul class="list-disc md:columns-5 columns-2 mx-6">
@@ -110,3 +110,44 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <li>Adobe Photoshop</li>
   </ul>
 </BaseLayout>
+
+
+<script>
+  import {gsap, Sine} from "gsap";
+
+  gsap.from("main", {
+    opacity:0,
+    x:-40,
+    ease: Sine.easeInOut
+  })
+  gsap.from(".profile-title", {
+    opacity:0,
+    delay: 0.1,
+    x:-20,
+    ease: Sine.easeInOut
+  })
+  gsap.from(".education-title", {
+    opacity:0,
+    delay: 0.2,
+    x:-20,
+    ease: Sine.easeInOut
+  })
+  gsap.from(".experience-title", {
+    opacity:0,
+    delay: 0.25,
+    x:-20,
+    ease: Sine.easeInOut
+  })
+  gsap.from(".certifications-title", {
+    opacity:0,
+    delay: 0.30,
+    x:-20,
+    ease: Sine.easeInOut
+  })
+  gsap.from(".skills-title", {
+    opacity:0,
+    delay: 0.35,
+    x:-20,
+    ease: Sine.easeInOut
+  })
+</script>
