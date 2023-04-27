@@ -6,6 +6,11 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://astro-modern-personal-website.netlify.app',
-  integrations: [mdx(), sitemap(), tailwind()]
+  site: 'https://jiaulislam.github.io/',
+  integrations: [mdx(), sitemap(), tailwind()],
+  "plugins": [
+    {
+      "name": "@astrojs/ts-plugin"
+    },
+  ],
 });
