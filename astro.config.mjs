@@ -6,7 +6,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://jiaulislam.github.io/',
+  site: 'https://jiaulislam.dev/',
   integrations: [mdx(), sitemap(), tailwind()],
   "plugins": [
     {
