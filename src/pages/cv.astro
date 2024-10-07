@@ -3,16 +3,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
-<BaseLayout title = "Resume">
+<BaseLayout title="Resume">
   <div class="mb-5">
     <div class="text-3xl w-full font-bold profile-title">Profile</div>
   </div>
 
   <div class="mb-10 text-justify profile-summary">
-    B.Sc in Computer & Science with 3.5 years + of experience in software development. Dominion of various programming
-    languages, frameworks, CMS. Experience in WEB design and development. Work with Data Base handled
-    systems, as well as design, normalization and migration. Knowledge of work with graphic design tools for image
-    manipulation, building ERP softwares like Inventory Management, Employee Management, HRMS.
+    B.Sc in Computer & Science with 5 years of experience in software
+    development. Dominion of various programming languages, frameworks, CMS.
+    Experience in WEB design and development. Work with Data Base handled
+    systems, as well as design, normalization and migration. Knowledge of work
+    with graphic design tools for image manipulation, building ERP softwares
+    like Inventory Management, Employee Management, HRMS.
   </div>
 
   <div class="mb-5">
@@ -40,11 +42,17 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="Senior Executive Officer"
-      subtitle="From 2021 at Pragati Life Insurance Ltd, Dhaka, Bangladesh"
-      desc="Responsible for developing various systems and applications related to insurance premium calculations, new policies, proposals, HRMS modules, and Account modules. This included developing a parser to automate the verification process of a customer, designing and developing a fintech API and payment gateway for various payment options, implementing various frameworks such as SQLAlchemy ORM, FastAPI, Flask, and Django, and writing database code such as Constraints, Indexes, Views, Stored Procedures, Triggers, and User Defined functions in Oracle 19c. They also developed a big data pipeline for database migration, wrote REST APIs using FastAPI and SQLAlchemy ORM, executed user acceptance testing, generated forms using React and React Hook Forms, and designed and created a backend data SMS API module using PL/SQL Oracle stored procedures, triggers, and functions."/>
+      title="Senior Backend Engineer"
+      subtitle="From 2023 to 2024 at Walton Digitech Industries Ltd, Dhaka, Bangladesh"
+      desc="Dedicated myself to develop backend applications for variaous in-house project and client projects."
+    />
     <TimeLineElement
-      title="Operation Project Coordinator"
+      title="Software Engineer"
+      subtitle="From 2021 to 2023 at Pragati Life Insurance Ltd, Dhaka, Bangladesh"
+      desc="Responsible for developing various systems and applications related to insurance premium calculations, new policies, proposals, HRMS modules, and Account modules. This included developing a parser to automate the verification process of a customer, designing and developing a fintech API and payment gateway for various payment options, implementing various frameworks such as SQLAlchemy ORM, FastAPI, Flask, and Django, and writing database code such as Constraints, Indexes, Views, Stored Procedures, Triggers, and User Defined functions in Oracle 19c. They also developed a big data pipeline for database migration, wrote REST APIs using FastAPI and SQLAlchemy ORM, executed user acceptance testing, generated forms using React and React Hook Forms, and designed and created a backend data SMS API module using PL/SQL Oracle stored procedures, triggers, and functions."
+    />
+    <TimeLineElement
+      title="Automation Engineer"
       subtitle="From 2019 to 2021 at Step One Group, Dhaka, Bangladesh"
       desc="Experienced in coordinating with IT departments to update and automate tasks to streamline business needs. Skilled in developing fintech APIs and Payment Gateways using PHP & Python to provide seamless payment experiences for customers. Writing testable codes and produce bug-free codes. Proficient in identifying and notifying outsource developer teams of any inconsistencies in web apps to fix issues using exceptions reports. Designed & developed automation tests for existing apps using Selenium/Playwright to test web app services. Skilled in designing and developing RPA-type automation apps using Selenium Python for mundane and repetitive tasks. Additionally, proficient in developing MS Excel automation using Python OpenPyXL to speed up C&F business processes."
     />
@@ -61,21 +69,43 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold certifications-title">Certifications</div>
+    <div class="text-3xl w-full font-bold certifications-title">
+      Certifications
+    </div>
   </div>
 
   <ul class="list-disc mx-6 mb-10 grid gap-2">
     <li>
-      <a href="https://www.hackerrank.com/certificates/4f6cd26e06f2" target="_blank"> Problem Solving (Basic)</a>
+      <a
+        href="https://www.hackerrank.com/certificates/4f6cd26e06f2"
+        target="_blank"
+      >
+        Problem Solving (Basic)</a
+      >
     </li>
     <li>
-      <a href="https://www.hackerrank.com/certificates/c6019073a0b2" target="_blank"> Python (Basic)</a>
+      <a
+        href="https://www.hackerrank.com/certificates/c6019073a0b2"
+        target="_blank"
+      >
+        Python (Basic)</a
+      >
     </li>
     <li>
-      <a href="https://www.hackerrank.com/certificates/735e42e155ef" target="_blank"> Oracle Database 12c: SQL Fundamentals</a>
+      <a
+        href="https://www.hackerrank.com/certificates/735e42e155ef"
+        target="_blank"
+      >
+        Oracle Database 12c: SQL Fundamentals</a
+      >
     </li>
     <li>
-      <a href="https://www.hackerrank.com/certificates/5b4c11dbc4d7" target="_blank"> SQL (Intermediate) Certificate</a>
+      <a
+        href="https://www.hackerrank.com/certificates/5b4c11dbc4d7"
+        target="_blank"
+      >
+        SQL (Intermediate) Certificate</a
+      >
     </li>
   </ul>
 
@@ -111,43 +141,42 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </ul>
 </BaseLayout>
 
-
 <script>
-  import {gsap, Sine} from "gsap";
+  import { gsap, Sine } from "gsap";
 
   gsap.from("main", {
-    opacity:0,
-    x:-40,
-    ease: Sine.easeInOut
-  })
+    opacity: 0,
+    x: -40,
+    ease: Sine.easeInOut,
+  });
   gsap.from(".profile-title", {
-    opacity:0,
+    opacity: 0,
     delay: 0.1,
-    x:-20,
-    ease: Sine.easeInOut
-  })
+    x: -20,
+    ease: Sine.easeInOut,
+  });
   gsap.from(".education-title", {
-    opacity:0,
+    opacity: 0,
     delay: 0.2,
-    x:-20,
-    ease: Sine.easeInOut
-  })
+    x: -20,
+    ease: Sine.easeInOut,
+  });
   gsap.from(".experience-title", {
-    opacity:0,
+    opacity: 0,
     delay: 0.25,
-    x:-20,
-    ease: Sine.easeInOut
-  })
+    x: -20,
+    ease: Sine.easeInOut,
+  });
   gsap.from(".certifications-title", {
-    opacity:0,
-    delay: 0.30,
-    x:-20,
-    ease: Sine.easeInOut
-  })
+    opacity: 0,
+    delay: 0.3,
+    x: -20,
+    ease: Sine.easeInOut,
+  });
   gsap.from(".skills-title", {
-    opacity:0,
+    opacity: 0,
     delay: 0.35,
-    x:-20,
-    ease: Sine.easeInOut
-  })
+    x: -20,
+    ease: Sine.easeInOut,
+  });
 </script>
